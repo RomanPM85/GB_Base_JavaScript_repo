@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GB JS Basic</title>
+    <!-- <script src="/Lesson1/main.js"></script> -->
+</head>
+
+<body>
+    <h1>GB JavaScript Lesson 1</h1>
+    <p>1. Задать температуру в градусах по Цельсию. Вывести в alert соответствующую температуру в градусах по
+        Фаренгейту. Подсказка: расчёт идёт по формуле: Tf = (9 / 5) * Tc + 32, где Tf – температура по Фаренгейту,
+        Tc – температура по Цельсию
+    </p>
+    <button id="func_id_1"> перевести температу по Фаренгейту</button>
+    <script>
+        func_id_1.addEventListener("click", myfunc_1);
+        function myfunc_1() {
+            var tc = Number(parseInt(prompt("Введите градусы по цельсию: ")));
+            var tf = (9 / 5) * tc + 32;
+            var tf = tf.toFixed();
+            alert("температура по Фаренгейту: " + tf);
+        }
+    </script>
+    <p>2. Работа с переменными.</p>
+    <ol>
+        <li>undefined</li>
+        <li>null</li>
+        <li>true</li>
+        <li>5</li>
+        <li>Hello world</li>
+        <li>" "</li>
+        <li>[1, 2, 5]</li>
+        <li>function () { }</li>
+    </ol>
+
+    <button id="func_id_2"> Показать типы переменные </button>
+
+    <script>
+        func_id_2.addEventListener("click", myfunc_2);
+        function myfunc_2() {
+            var typedate1 = undefined;
+            var typedate2 = null;
+            var typedate3 = true;
+            var typedate4 = 5;
+            var typedate5 = "Hello world";
+            var typedate6 = "";
+            var typedate7 = [1, 2, 5];
+            var typedate8 = function () { };
+            document.write(typedate1 + " --------------------- " + typeof typedate1 + "<br>");
+            document.write(typedate2 + " --------------------- " + typeof typedate2 + "<br>");
+            document.write(typedate3 + " --------------------- " + typeof typedate3 + "<br>");
+            document.write(typedate4 + " --------------------- " + typeof typedate4 + "<br>");
+            document.write(typedate5 + " --------------------- " + typeof typedate5 + "<br>");
+            document.write(typedate6 + " --------------------- " + typeof typedate6 + "<br>");
+            document.write(typedate7 + " --------------------- " + typeof typedate7 + "<br>");
+            document.write(typedate8 + " --------------------- " + typeof typedate8 + "<br>");
+        }
+    </script>
+
+    <p>3. Объявить две переменные: admin и name. Записать в name строку "Василий"; Скопировать значение из name в admin.
+        Вывести admin (должно вывести «Василий»).</p>
+    <button id="func_id_3"> Как зовут admin ?</button>
+    <script>
+        func_id_3.addEventListener("click", myfunc_3);
+        function myfunc_3() {
+            var admin = "";
+            var name = "Василий";
+            var admin = name;
+            alert(admin);
+        }
+    </script>
+    <p>4. *Чему будет равно JS-выражение 1000 + "108"/</p>
+    <button id="func_id_4"> Результат</button>
+    <script>
+        func_id_4.addEventListener("click", myfunc_4);
+        function myfunc_4() {
+            var num1 = 1000;
+            var num2 = "108";
+            rez_4 = alert(num1 + num2);
+        }
+    </script>
+    <p>5. *Самостоятельно разобраться с атрибутами тега script (async и defer)/</p>
+    <button id="func_id_5"> async и defer </button>
+    <script>
+        func_id_5.addEventListener("click", myfunc_5);
+        function myfunc_5() {
+            var defer_info = "Атрибут defer сообщает браузеру, что он должен продолжать обрабатывать страницу и загружать скрипт в фоновом режиме, а затем запустить этот скрипт, когда он загрузится. defer --- Порядок документа (как расположены в документе). Выполняется после того, как документ загружен и обработан (ждёт), непосредственно перед DOMContentLoaded."
+            var async_info = "async --- Порядок загрузки (кто загрузится первым, тот и сработает). Не имеет значения. Может загрузиться и выполниться до того, как страница полностью загрузится. Такое случается, если скрипты маленькие или хранятся в кеше, а документ достаточно большой."
+            document.write(defer_info + "<br>");
+            document.write(async_info);
+        }
+
+    </script>
+
+</body>
+
+</html>
