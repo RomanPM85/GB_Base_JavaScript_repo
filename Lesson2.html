@@ -5,22 +5,14 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>GB JS Basic</title>
-    <!-- <script src="/Lesson1/main.js"></script> -->
 </head>
 
 <body>
     <div class="header">
         <ul class="header">
             <li><a href="index.html"><img src="" alt="index"></a></li>
-            <li><a href="../Lesson1/Lesson1.html"><img src="" alt="lesson1"></a></li>
-            <li><a href="../Lesson2/Lesson2.html"><img src="" alt="lesson2"></a></li>
-            <li><a href="../Lesson3/Lesson2.html"><img src="" alt="lesson3"></a></li>
-            <li><a href="../Lesson4/lesson4.html"><img src="" alt="lesson4"></a></li>
-            <li><a href="../Lesson5/lesson5.html"><img src="" alt="lesson5"></a></li>
-            <li><a href="../Lesson6/lesson6.html"><img src="" alt="lesson6"></a></li>
-            <li><a href="../Lesson7/lesson7.html"><img src="" alt="lesson7"></a></li>
-            <li><a href="../Lesson8/lesson8.html"><img src="" alt="lesson8"></a></li>
-        </ul>
+            <li><a href="Lesson1.html"><img src="" alt="lesson1"></a></li>
+            <li><a href="Lesson2.html"><img src="" alt="lesson2"></a></li>
     </div>
     <h1>GB JavaScript Lesson 2</h1>
     <h2>1. Дан код:</h2>
@@ -35,10 +27,21 @@
     </p>
     <p>Почему код даёт именно такие результаты?</p>
     <button id="Less2_func_id_1"> Ответ</button>
-    <script>
+    <script type="text/javascript">
         Less2_func_id_1.addEventListener("click", myfunc_less_2_1);
         function myfunc_less_2_1() {
-            alert()
+            document.write('c = ++a; alert(c); // 2 <br>');
+            document.write('такой результат выходит из того,что ++a это префиксной форма инкрементирование, увеличивают значение перед выводом 1+1=2. <br>');
+            document.write('d = b++; alert(d); // 1 <br>');
+            document.write('такой результат выходит из того,что b++ это постфиксная форма инкрементирование, перед выводом выводит переменную, после увеличивает на единицу 1=1+1. <br>');
+            document.write('c = (2 + ++a); alert(c); // 5 <br>');
+            document.write('2+(1+(1+1))=5. Переменная (а) уже имеет значение 1+1=2 из предыдущего расчета, тогда 2+(1+(1+1))=5 <br>');
+            document.write('d = (2 + b++); alert(d); // 4 <br>');
+            document.write(' Переменная b = 2 т.к. из предыдущего результата b вернулась в переменную как 1+1, значит результат следующий 2+(1+1)=4.<br>');
+            document.write('alert(a); // 3 <br>');
+            document.write('  c = ++a;  +  c = (2 + ++a); (1+1) =>; 2+1; =>3.<br>');
+            document.write('alert(b); // 3 <br>');
+            document.write(' d = b++; + d = (2 + b++); ; (1+1) => ; (2+1); =>3.<br>');
         }
     </script>
     <h2>2. Чему будет равен x в примере ниже?</h2>
@@ -55,6 +58,7 @@
             var a = 2;
             var x = 1 + (a *= 2);
             alert(x)
+            document.write('x равен 5 т.к. 1 + 2 * 2 = 1+4 =5')
         }
     </script>
 
@@ -83,11 +87,27 @@
     </p>
     <button id="Less2_func_id_3"> Ответ </button>
     <script>
-        Less2_func_id_3.addEventListener("click", myfunc_less_2_3);
-        function myfunc_less_2_3() {
+            Less2_func_id_3.addEventListener("click", myfunc_less_2_3);
 
+            function myfunc_less_2_3() {
+                var a = Number(parseInt(prompt("Введите число a=: ")));
+                var b = Number(parseInt(prompt("Введите число b=: ")));
+
+            if (a && b > 0) {
+                rez_1 = a - b;
+                alert("Разность чисел a и b= " + rez_1);  
+            } else if (a && b < 0) {
+                rez_1 = a * b;
+                alert("Произведение чисел a и b= " + rez_2);  
+            } 
+            else {
+                rez_3 = a + b;
+                alert("Сумма чисел a и b= " + rez_3);  
+            }
+            
         }
     </script>
+
 </body>
 
 </html>
