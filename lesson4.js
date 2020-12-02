@@ -4,8 +4,23 @@
 ‘десятки’: 4, ‘сотни’: 2}​ . Если число превышает 999, необходимо выдать соответствующее
 сообщение с помощью ​ console.log​ и вернуть пустой объект.*/
 
-
-
+function inputNumUser() {
+    let inputNumber = 123;
+    if (inputNumber > 0 && inputNumber <=999) {
+        const ones = inputNumber % 10;
+        const ten = inputNumber % 100 - ones;
+        const hundreds = inputNumber - ones - ten;
+        const objNumber = {
+            ones: ones /1,
+            ten: ten / 10,
+            hundreds: hundreds / 100,
+        };
+        console.log('Единицы: ' + objNumber.ones + ', Десятки: ' + objNumber.ten + ',  Сотни: ' + objNumber.hundreds);
+    } else {
+        console.log('введенный номер ' + inputNumber + ', вне диапазона (0 - 999)');
+    }
+  }
+  inputNumUser();
 
 /**2. Продолжить работу с интернет-магазином:
 a. В прошлом домашнем задании вы реализовали корзину на базе массивов. Какими
