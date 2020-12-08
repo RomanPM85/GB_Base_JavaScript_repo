@@ -3,27 +3,11 @@
 нумероваться числами от 1 до 8, столбцы — латинскими буквами A, B, C, D, E, F, G, H. */
 
 var container = document.querySelector(".container");
-container.style.background = "brown";
-container.style.width = "660px";
-container.style.height = "660px";
-container.style.paddingLeft = "60px";
-container.style.paddingBottom = "60px";
-container.style.margin = "0 auto";
-container.style.display = "flex";
-container.style.flexWrap = "wrap";
 
 function my_initiation() {
   var cell = document.createElement("div");
   cell.className = "cell";
   cont.append(cell);
-  cell.style.width = "60px";
-  cell.style.height = "60px";
-  cell.style.margin = "0px";
-  cell.style.padding = "0px";
-  cell.style.fontSize = "40px";
-  cell.style.fontWeight = "bold";
-  cell.style.textAlign = "center";
-
 }
 window.onload = my_initiation;
 
@@ -37,9 +21,9 @@ for (var i = 0;
   (i < masCell.length); i++) {
   var c;
   if (i % 2 == 0) {
-    c = "dimgrey";
+    c = "DarkSlateGray";
   } else {
-    c = "bisque";
+    c = "LightGray";
   }
   masCell[i].style.background = c;
   if ((i > 33) && (i < 42)) {
@@ -69,41 +53,41 @@ for (var i = 0;
 
   for (var f = 89;
     (f < 108); f++) {
-    masCell[f].style.color = "white";
+    masCell[f].style.color = " white";
   }
   for (var f = 0;
     (f < 22); f++) {
-    masCell[f].style.background = "brown";
+    masCell[f].style.background = "white";
   }
   for (var f = 110;
     (f < 121); f++) {
-    masCell[f].style.background = "brown";
+    masCell[f].style.background = "white";
   }
 
-  masCell[22].style.background = "brown";
-  masCell[33].style.background = "brown";
-  masCell[44].style.background = "brown";
-  masCell[55].style.background = "brown";
-  masCell[66].style.background = "brown";
-  masCell[77].style.background = "brown";
-  masCell[88].style.background = "brown";
-  masCell[99].style.background = "brown";
-  masCell[31].style.background = "brown";
-  masCell[32].style.background = "brown";
-  masCell[42].style.background = "brown";
-  masCell[43].style.background = "brown";
-  masCell[53].style.background = "brown";
-  masCell[54].style.background = "brown";
-  masCell[64].style.background = "brown";
-  masCell[65].style.background = "brown";
-  masCell[75].style.background = "brown";
-  masCell[76].style.background = "brown";
-  masCell[86].style.background = "brown";
-  masCell[87].style.background = "brown";
-  masCell[97].style.background = "brown";
-  masCell[98].style.background = "brown";
-  masCell[108].style.background = "brown";
-  masCell[109].style.background = "brown";
+  masCell[22].style.background = "white";
+  masCell[33].style.background = "white";
+  masCell[44].style.background = "white";
+  masCell[55].style.background = "white";
+  masCell[66].style.background = "white";
+  masCell[77].style.background = "white";
+  masCell[88].style.background = "white";
+  masCell[99].style.background = "white";
+  masCell[31].style.background = "white";
+  masCell[32].style.background = "white";
+  masCell[42].style.background = "white";
+  masCell[43].style.background = "white";
+  masCell[53].style.background = "white";
+  masCell[54].style.background = "white";
+  masCell[64].style.background = "white";
+  masCell[65].style.background = "white";
+  masCell[75].style.background = "white";
+  masCell[76].style.background = "white";
+  masCell[86].style.background = "white";
+  masCell[87].style.background = "white";
+  masCell[97].style.background = "white";
+  masCell[98].style.background = "white";
+  masCell[108].style.background = "white";
+  masCell[109].style.background = "white";
 
   masCell[12].innerText = "A";
   masCell[13].innerText = "B";
