@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 .container {
     background: white;
     width: 660px;
@@ -17,4 +18,56 @@ div {
     font-size: 40px;
     font-weight: bold;
     text-align: center;
+=======
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: normal;
+}
+
+.container {
+    max-width: 1140px;
+    margin: 0 auto;
+    padding-top: 10px;
+    padding-bottom: 15px;
+    border-style: outset;
+    width: 400px;
+    text-align: center;
+    background: whitesmoke;
+}
+
+.add_item {
+    font-size: 16px;
+    line-height: 10px;
+    text-align: center;
+    letter-spacing: 0.04em;
+    color: #ffffff;
+    background: #5A98D0;
+    box-shadow: 5px 10px 2px rgba(53, 110, 173, 0.2);
+    border-radius: 10px;
+    padding: 5px 10px;
+    text-decoration: none;
+    display: inline-block;
+    margin-top: 5px;
+}
+
+/*.item_title {}
+
+.item_price {}
+
+.item_box {}
+*/
+.shopping_list {
+    text-align: center;
+}
+
+tr {
+    background: whitesmoke;
+    padding: 5px;
+>>>>>>> lesson6
 }
