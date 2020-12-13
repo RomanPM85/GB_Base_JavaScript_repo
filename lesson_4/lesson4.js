@@ -4,6 +4,7 @@
 ‘десятки’: 4, ‘сотни’: 2}​ . Если число превышает 999, необходимо выдать соответствующее
 сообщение с помощью ​ console.log​ и вернуть пустой объект.*/
 
+
 function inputNumUser() {
     let inputNumber = 123;
     if (inputNumber > 0 && inputNumber <=999) {
@@ -28,13 +29,15 @@ a. В прошлом домашнем задании вы реализовали
 b. Реализуйте такие объекты.
 c.
 Перенести функционал подсчета корзины на объектно-ориентированную базу. */
-function obj(){
-    obj=new Object();
-    this.add=function(key,value){
-        obj[""+key+""]=value;
+class obj {
+    constructor() {
+        obj = new Object();
+        this.add = function (key, value) {
+            obj["" + key + ""] = value;
+        };
+        this.obj = obj;
     }
-    this.obj=obj
-  }
+}
   my_obj=new obj();
   my_obj.add('телефон', '15000');
   my_obj.add('ноутбук', '55000');
